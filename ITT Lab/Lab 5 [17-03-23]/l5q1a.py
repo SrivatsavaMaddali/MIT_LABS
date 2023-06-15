@@ -1,0 +1,8 @@
+a=input("Enter 'a':")
+b=input("Enter 'b':")
+print("Sum=",int(a)+int(b))
+print("Difference=",abs(int(a)-int(b)))
+print("Product=",int(a)*int(b))
+print("Div.=",int(a)/int(b))
+print("Remainder=",int(a)%int(b))
+print("Floor div=",int(a)//int(b))

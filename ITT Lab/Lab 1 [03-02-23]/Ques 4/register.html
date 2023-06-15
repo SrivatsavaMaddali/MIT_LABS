@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register</title>
+
+<body style="background-color:beige"> 
+
+    <center>
+        <h1 style="color:rgb(128, 0, 96)">STUDENT REG FORM</h1>
+    </center>
+
+    <h2 style="color: crimson;">ENTER THE FOLLOWING DETAILS:</h2>
+
+    <p style="text-decoration: underline; color:chocolate">Name:</p>
+    <form action="action_page.php" method="get">
+        First name:
+        <input type="text">
+        Last name:
+        <input type="text" name="lastname">
+
+        <p style="text-decoration: underline;  color:chocolate">Address:</p>
+        <form action="action_page.php" method="get">
+            <input type="text" name="address">
+
+            <p style="text-decoration: underline;  color:chocolate">Email-ID:</p>
+            <form action="action_page.php" method="get">
+                <input type="text" name="email">
+
+                <h2 style="color: crimson;">WHAT BOOKS YOU EXPECT THE MOST FROM THE BOOK STORE?</h2>
+
+                <input type="checkbox" id="Location" name="Location" value="Location">
+                <label for="Location">Location</label><br>
+                <input type="checkbox" id="Sports" name="Sports" value="Sports">
+                <label for="Sports"> Sports</label><br>
+                <input type="checkbox" id="Campus" name="Campus" value="Manga">
+                <label for="Campus">Manga</label><br>
+                <input type="checkbox" id="Atmosphere" name="Atmosphere" value="Earth">
+                <label for="Atmosphere">Earth</label><br>
+                <input type="checkbox" id="Dorm" name="Dorm" value="Horror">
+                <label for="Dorm">Horror</label><br>
+                <input type="checkbox" id="Room" name="Room" value="Romance">
+                <label for="Room"> Romance</label><br>
+                <input type="checkbox" id="Students" name="Students" value="Studies">
+                <label for="Students"> Studies</label><br>
+
+
+              
+
+
+                  <h2 style="color: crimson;">Tell us about yourself......</h2>
+                  <input type="text" name="Details" size="100" style="height: 100px;"><br><br>
+
+                
+                    <input type="submit" value="SUBMIT" style="background-color: chartreuse;">
+                    <input type="reset" value="RESET"  style="background-color: chartreuse;">
+
+                
+</body>
+
+</html>

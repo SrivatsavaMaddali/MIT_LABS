@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Guess the number game</title>
+  </head>
+  <body>
+    <h1>Guess the number game</h1>
+    <p>Choose a number between 1 and 15:</p>
+    <input type="number" id="guess">
+    <button onclick="checkGuess()">Guess</button>
+    <p id="result"></p>
+
+    <script>
+      
+      const secretNumber = Math.floor(Math.random() * 15) + 1;
+      let numGuesses = 0;
+
+      function checkGuess() {
+        const guess = parseInt(document.getElementById("guess").value);
+        if (guess === secretNumber) {
+          numGuesses++;
+          document.getElementById("result").innerHTML = `You guessed it right in ${numGuesses} tries!`;
+        } else if (guess < secretNumber) {
+          numGuesses++;
+          document.getElementById("result").innerHTML = "Too low, try again";
+        } else {
+          numGuesses++;
+          document.getElementById("result").innerHTML = "Too high, try again";
+        }
+      }
+    </script>
+  </body>
+</html>

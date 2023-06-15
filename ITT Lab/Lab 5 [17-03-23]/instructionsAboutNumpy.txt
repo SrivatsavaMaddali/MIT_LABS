@@ -1,0 +1,4 @@
+If numpy is not installed on the system, an error will pop up.
+Then you can open command prompt and install numpy.
+If you have adminstartor privileges, u can use "pip install numpy"
+Else, use "pip install --user numpy"

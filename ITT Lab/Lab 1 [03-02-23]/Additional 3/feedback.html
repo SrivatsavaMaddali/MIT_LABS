@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Feedback Form</title>
+</head>
+<body>
+    <h1>Campus Visit Feedback</h1>
+    <form method="post" action="">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br><br>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label>What did you like most about the campus?</label><br>
+        <input type="checkbox" id="students" name="likes[]" value="students">
+        <label for="students">Students</label><br>
+        <input type="checkbox" id="location" name="likes[]" value="location">
+        <label for="location">Location</label><br>
+        <input type="checkbox" id="campus" name="likes[]" value="campus">
+        <label for="campus">Campus</label><br>
+        <input type="checkbox" id="atmosphere" name="likes[]" value="atmosphere">
+        <label for="atmosphere">Atmosphere</label><br>
+        <input type="checkbox" id="dorms" name="likes[]" value="dorms">
+        <label for="dorms">Dorm Rooms</label><br>
+        <input type="checkbox" id="sports" name="likes[]" value="sports">
+        <label for="sports">Sports</label><br><br>
+        <label for="interest">How did you become interested in the university?</label><br>
+        <input type="radio" id="friends" name="interest" value="friends">
+        <label for="friends">Friends</label><br>
+        <input type="radio" id="television" name="interest" value="television">
+        <label for="television">Television</label><br>
+        <input type="radio" id="internet" name="interest" value="internet">
+        <label for="internet">Internet</label><br>
+        <input type="radio" id="other" name="interest" value="other">
+        <label for="other">Other</label><br><br>
+        <label for="comments">Additional Comments:</label><br>
+        <textarea id="comments" name="comments"></textarea><br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>

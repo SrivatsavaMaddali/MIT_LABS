@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LAB 1 ; QUESTION 1</title>
+
+<body style="background-color:beige">
+    <center>
+        <h1 style="color:rgb(128, 0, 96)">STUDENT FEEDBACK FORM</h1>
+    </center>
+
+    <h2 style="color: crimson;">ENTER THE FOLLOWING DETAILS:</h2>
+
+    <p style="text-decoration: underline; color:chocolate">Name:</p>
+    <form action="action_page.php" method="get">
+        First name:
+        <input type="text">
+        Last name:
+        <input type="text" name="lastname">
+
+        <p style="text-decoration: underline;  color:chocolate">Address:</p>
+        <form action="action_page.php" method="get">
+            <input type="text" name="address">
+
+            <p style="text-decoration: underline;  color:chocolate">Email-ID:</p>
+            <form action="action_page.php" method="get">
+                <input type="text" name="email">
+
+                <h2 style="color: crimson;">WHAT DO YOU LIKE THE MOST ABOUT THE CAMPUS?</h2>
+
+                <input type="checkbox" id="Location" name="Location" value="Location">
+                <label for="Location">Location</label><br>
+                <input type="checkbox" id="Sports" name="Sports" value="Sports">
+                <label for="Sports"> Sports</label><br>
+                <input type="checkbox" id="Campus" name="Campus" value="Campus">
+                <label for="Campus"> Campus</label><br>
+                <input type="checkbox" id="Atmosphere" name="Atmosphere" value="Atmosphere">
+                <label for="Atmosphere">Atmosphere</label><br>
+                <input type="checkbox" id="Dorm" name="Dorm" value="Dorm">
+                <label for="Dorm">Dorm</label><br>
+                <input type="checkbox" id="Room" name="Room" value="Room">
+                <label for="Room"> Room</label><br>
+                <input type="checkbox" id="Students" name="Students" value="Students">
+                <label for="Students"> Students</label><br>
+
+
+                <h2 style="color: crimson;">HOW DID YOU BECOME INTERESTED IN THE CAMPUS?</h2>
+                
+                    <input type="radio" id="Friends" name="fav_language" value="Friends">
+                    <label for="Friends">Friends</label><br>
+                    <input type="radio" id="Television" name="fav_language" value="Television">
+                    <label for="Television">Television</label><br>
+                    <input type="radio" id="Internet" name="fav_language" value="Internet">
+                    <label for="Internet">Internet</label><br>
+                    <input type="radio" id="Others" name="fav_language" value="Others">
+                    <label for="Others">Others</label>
+               
+
+
+                <h2 style="color: crimson;">COMMENTS IF ANY...</h2>
+                <input type="text" name="comments" size="100" style="height: 100px;"><br><br>
+
+                
+                    <input type="submit" value="SUBMIT" style="background-color: chartreuse;">
+                    <input type="reset" value="RESET"  style="background-color: chartreuse;">
+                
+
+
+</body>
+
+</html>

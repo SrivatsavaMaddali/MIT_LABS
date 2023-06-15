@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LoginOri</title>
+</head>
+<body style="background-color: beige">
+  <center>
+    <h1 style="color: rgb(128, 0, 96)">Login Page</h1>
+    <form class="input-group">
+      <input type="text" id="input-field" placeholder="Username" required>
+      <input type="password" id="input-field2" placeholder="Password" required>
+      <button type="button" class="Submit" onclick="checkPassword()">Login</button>
+    </form>
+  </center>
+  <script>
+    function checkPassword() {
+      var field2 = document.getElementById("input-field2").value;
+      if (field2 === "password") {
+        window.location.href = './where.html';
+      } else {
+        alert("Invalid password. Please try again.");
+      }
+    }
+  </script>
+</body>
+</html>

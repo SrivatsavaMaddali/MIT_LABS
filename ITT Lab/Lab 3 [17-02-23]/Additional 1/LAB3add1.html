@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <meta charset="UTF-8">
+      <title>Parking Charges</title>
+      <style>
+         #List{ visibility: hidden; }
+        </style>
+    </head>
+     <body>
+         <h1>Parking Charges Calculator</h1>
+         <p>Enter the name and number of hours parked:</p>
+
+           <form>
+            <label for="custname">Name:</label>
+             <input type="text" id="custname" name="custname" min="0">
+             <br>
+             <br>
+             <label for="custtime">Hours:</label>
+              <input type="number" id="custtime" name="custtime" min="0">
+              <br>
+              <br>
+            <button type="button" onclick="calculateCharges()">Calculate Charges</button>
+           </form> 
+          <br>
+          <table id="List" border="1" cellspacing="0" >
+             <thead>
+                <tr>
+                     <th>Customer</th>
+                      <th>Hours Parked</th>
+                      <th>Charge (Rs.)</th>
+                </tr> 
+            </thead>
+            <tbody id="chargesTableBody">
+                 </tbody>
+          </table>
+                  <br>
+                   <h2>List of customers who parked in the previous day:</h2>
+                    <table id="prevList" border="1" cellspacing="0" >
+                        <thead>
+                             <tr>
+                                <th>Customer</th>
+                                <th>Hours Parked</th>
+                                <th>Charge (Rs.)</th>
+                             </tr>
+                        </thead>
+                <tbody id="prevchargesTableBody">
+                    <tr>
+                        <td>Varun</td>
+                         <td>3</td>
+                         <td>2</td>
+                   </tr>
+
+                  <tr>
+                    <td>Tirth</td>
+                    <td>7</td>
+                    <td>4</td>
+                 </tr>
+                 
+                 <tr>
+                     <td>Prival</td>
+                     <td>1</td>
+                      <td>2</td>
+                 </tr>
+                     <tr>
+                         <td>Rishi</td>
+                          <td>5</td>
+                           <td>3</td>
+                    </tr>
+                    
+                <tr>
+                     <td>Shubh</td>
+                      <td>3</td>
+                      <td>2</td>
+                    </tr>
+                  <tr>
+                        <td>Gem</td>
+                        <td>2</td>
+                         <td>2</td> 
+                        </tr>
+                    </tbody>
+                </table>
+                 <script>
+                    function calculateCharges() 
+                    {document.getElementById("List").style.visibility="visible";
+                    var customerName = document.getElementById("custname").value;
+                     var customerHours = parseInt(document.getElementById("custtime").value);
+                     var customerCharge = calculateCharge(customerHours);
+                     var table= document.getElementById("chargesTableBody").innerHTML;
+                     document.getElementById("chargesTableBody").innerHTML = table +` 
+                     <tr>
+                         <td>${customerName}</td>
+                        <td>${customerHours}</td> 
+                        <td>${customerCharge}</td>
+                    </tr>`; }
+                    
+                    function calculateCharge(hoursParked)
+                     {if (hoursParked <= 3) 
+                        {return 2;} 
+                        else { return 2 + 0.5 * (hoursParked - 3);}}
+                    </script>
+                </body>
+                </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Payment</title>
+
+<body style="background-color:beige"> 
+
+    <center>
+        <h1 style="color:rgb(128, 0, 96);text-decoration:underline">Your Cart</h1>
+    </center>
+
+    <h2 style="color: crimson;">Payment details:</h2>
+
+    <center>
+
+</p>
+<table border="2">
+  <tr>
+    <th>Book</th>
+    <th>Cost</th>
+  </tr>
+  <tr>
+    <td>Pride and Prejudice</td>
+    <td class="cost" onchange="calculateTotal()">100</td>
+  </tr>
+  <tr>
+    <td>Sense and Sensibility</td>
+    <td class="cost" onchange="calculateTotal()">100</td>
+  </tr>
+  <tr>
+    <td>The Line of Beauty</td>
+    <td class="cost" onchange="calculateTotal()">100</td>
+  </tr>
+  <tr>
+    <td>Heartstopper</td>
+    <td class="cost" onchange="calculateTotal()">1300</td>
+  </tr>
+  <tr id="total">
+    <td>Total</td>
+    <td></td>
+  </tr>
+</table>
+<br>
+<button type="submit" class="submit" onclick="window.location.href='confirm.html';">Pay</button>
+ </center>
+
+    <script>
+  function calculateTotal() {
+    var total = 0;
+    var costCells = document.getElementsByClassName('cost');
+    for (var i = 0; i < costCells.length; i++) {
+      total += parseInt(costCells[i].textContent);
+    }
+    document.getElementById('total').lastElementChild.textContent = total;
+  }
+
+  // Call the function when the page loads to initialize the total
+  calculateTotal();
+</script>
+               <a href="home.html">Log Out</a><br>
+<a href="catalog.html">Go back to Catalog</a><br>
+<a href="cart.html">Go back to Cart</a><br>
+<a href="profile.html">My Profile</a><br>     
+</body>
+
+</html>
